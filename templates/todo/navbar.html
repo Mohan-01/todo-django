@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<body>
+    <header class="bg-dark-subtle">
+        <div class="nav-div">
+          <a class="image" href="/">
+            <img src="{% static 'images/logo.png' %}" alt="Logo" />
+          </a>
+          <nav class="nav">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/add-task">Add Task</a>
+                </li>
+                
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link active" href="/profile">{{user}}</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/logout">Logout</a>
+                  </li>
+                {% else %}
+                <li class="nav-item">
+                  <a class="nav-link active" href="/signup">Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/login">Login</a>
+                </li>
+                {% endif %}
+              </ul>
+          </nav>
+        </div>
+      </header>
+</body>
+</html>

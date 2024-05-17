@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 {% extends 'todo/base.html' %} {% block title %} {{submit}} {% endblock title %}
 {% block content %}
-<div class="container mt-5">
-  <h3>Add a task</h3>
-  <form method="post">
+<div class="container">
+  <div class="row">
+    <center>
+
+      <form method="post">
+    <h3>Add a task</h3>
     {{form}}
     <input class="btn btn-success" type="submit" value="{{submit}}" />
     {% csrf_token %}
   </form>
+  </center>
+  </div>
 </div>
 {% endblock content %}

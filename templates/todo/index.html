@@ -17,14 +17,12 @@
       <td>{{todo.title}}</td>
       <td>{{todo.dead_line}}</td>
       <td>{{todo.completed}}</td>
-      <td><a href="{% url 'EditTask' todo.slug %}">Edit</a></td>
-      <td><a href="{% url 'DeleteTask' todo.slug %}">Delete</a></td>
+      <td><a class="actions" href="{% url 'EditTask' todo.slug %}">Edit</a></td>
+      <td><a class="actions" href="{% url 'DeleteTask' todo.slug %}">Delete</a></td>
     </tr>
     {% endfor %}
   </tbody>
 </table>
-{% else %} {% if message %}
-<h1>{{message}}</h1>
-{% else %}
-<h1>{{'No Todos Found'}}</h1>
-{% endif %} {% endif %} {% endblock content %}
+{% else %} 
+<h1>{{'No Tasks Found'}}</h1>
+{% endif %} {% endblock content %}

@@ -1,8 +1,27 @@
 <!DOCTYPE html>
+{% extends 'todo/base.html' %}
+
+{% block title %}
+  Login
+{% endblock title %}
+  
 
 {% block content %}
-<form method="post">
-  {{form.as_p}} {% csrf_token %}
-  <input type="submit" value="Login" />
-</form>
+<div class="container">
+  <div class="row">
+    <center>
+      <form method="POST" action="{% url 'login' %}">
+    <h3>Login</h3>
+    {% csrf_token %}
+    <div class="mb-3">
+      <input type="username" class="form-control" name="username" placeholder="Enter your username">
+    </div>
+    <div class="mb-3">
+      <input type="password" class="form-control" name="password" placeholder="Enter your password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</center>
+<div>
+</div>
 {% endblock content %}
