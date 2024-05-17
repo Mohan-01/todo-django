@@ -23,27 +23,32 @@ pip install Faker
 
 ### Step 3: Configure Database
 Configure the database of your choice in the `settings.py` file. By default, MySQL is used.
+```
 python manage.py makemigrations
 python manage.py migrate
+```
 
 ---
 
 ### Step 4: Populate Fake Data
 To populate the database with fake data, run the following command and specify the number of records to populate:
+```
 python populate.py
-
+```
 ---
 
 ### Step 5: Create Superuser
 Create a superuser account to access the admin panel by running the command and providing the required details:
+```
 python manage.py createsuperuser
-
+```
 ---
 
 ### Step 6: Run the Server
 Start the development server by running the following command:
+```
 python manage.py runserver
-
+```
 ---
 
 ### Step 7: Access the Application
