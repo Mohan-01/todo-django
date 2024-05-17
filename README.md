@@ -1,6 +1,5 @@
 ## TODO application using DJANGO
----
-### To run this project in your system
+#### To run this project in your system
 ---
 Step 1: clone the repository in your system
 ---
