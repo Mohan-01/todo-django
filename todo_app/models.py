@@ -4,7 +4,7 @@ from django.utils.text import slugify
 
 class Task(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.CharField(max_length=256, unique=True, primary_key=True)
+    title = models.CharField(max_length=254, unique=True, primary_key=True)
     dead_line = models.DateTimeField(null=True, blank=True)
     completed = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
