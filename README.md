@@ -1,35 +1,53 @@
-## TODO application using DJANGO
-#### To run this project in your system
+# TODO Application using Django
+
+## Introduction
+This is a simple TODO application built using Django, a high-level Python web framework. Follow the instructions below to set up and run the project on your system.
+
 ---
-Step 1: clone the repository in your system
+
+### Step 1: Clone the Repository
+Clone the repository to your local system.
+
+(Optional) It's recommended to create a new virtual environment and activate it to isolate the project dependencies from your system's Python modules and versions.
+
 ---
-(Optional) Create a new virtual environment and activate it to run this project i.e not to distrub with your python modules and its versions
+
+### Step 2: Install Dependencies
+Run the following commands to install the required dependencies:
+pip install Django
+pip install Faker
+
 ---
-Step 2: Run the following commands
-```
-1. pip install Django
-2. pip install Faker
-```
+
+### Step 3: Configure Database
+Configure the database of your choice in the `settings.py` file. By default, MySQL is used.
+python manage.py makemigrations
+python manage.py migrate
+
 ---
-Step 3: Configure the database of your choice in settings.py file (I used mysql)
-```
-1. python manage.py makemigrations
-2. python manage.py migrate
-```
----
-Step 4: Populate the fake data, run the command and then enter the number of records to populate
-```
+
+### Step 4: Populate Fake Data
+To populate the database with fake data, run the following command and specify the number of records to populate:
 python populate.py
-````
+
 ---
-Step 5: Create a superuser to access the admin panel, run the command then enter details
-```
+
+### Step 5: Create Superuser
+Create a superuser account to access the admin panel by running the command and providing the required details:
 python manage.py createsuperuser
-```
+
 ---
-Step 6: Run the server
-```
+
+### Step 6: Run the Server
+Start the development server by running the following command:
 python manage.py runserver
-```
+
 ---
-Step 7: Open your browser and enter [http://localhost:8000](http://localhost:8000)
+
+### Step 7: Access the Application
+Open your web browser and navigate to [http://localhost:8000](http://localhost:8000) to access the TODO application.
+
+---
+
+## ReadME.md
+This is the ReadME.md file for the project.
