@@ -32,7 +32,7 @@ python manage.py migrate
 ---
 
 ### Step 4: Populate Fake Data
-To populate the database with fake data, run the following command and specify the number of records to populate: (ignore the warnings here it's just timezone variation)
+To populate the database with fake data, run the following command and specify the number of records to populate: (ignore the warnings here it's just timezone variation). You can change the user passwords in `populate.py` file, default password is `pass1234`.
 ```
 python populate.py
 ```
