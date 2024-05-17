@@ -25,7 +25,7 @@ def addTask(req):
             dead_line = form.cleaned_data['dead_line']
             user = User.objects.get(id=req.user.id)
             
-            task = models.Task(user=user, title=title, dead_line=dead_line, slug=slugify(title))
+            task = models.Task(user=user, title=title, dead_line=dead_line)
             task.save()
             messages.success(req, 'Task added successfully')
             return redirect('ListTasks')

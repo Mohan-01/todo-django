@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.text import slugify
 
 # from django.core import validators
 
@@ -17,5 +18,12 @@ class Task(models.Model):
     completed = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(default='', null=False)
+    
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            print('saving task')
+            self.slug = slugify(self.title)
+        print(self.slug)
+        super(Task, self).save(*args, **kwargs)
     
     

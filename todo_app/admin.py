@@ -3,6 +3,6 @@ from . import models
 
 # Register your models here.
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('title', 'dead_line', 'completed', 'created_at')
+    list_display = ('title', 'dead_line', 'completed', 'created_at', 'slug')
     
 admin.site.register(models.Task, TaskAdmin)
