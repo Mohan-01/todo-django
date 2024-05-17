@@ -1,9 +1,7 @@
 ## TODO application using DJANGO
-
 ---
-
 ### To run this project in your system
-
+---
 Step 1: clone the repository in your system
 ---
 (Optional) Create a new virtual environment and activate it to run this project i.e not to distrub with your python modules and its versions
