@@ -22,7 +22,7 @@ def populate_users(n):
         last_name = fake.last_name()
         username = fake.user_name()
         email = fake.email()
-        password = make_password('myindia')
+        password = make_password('pass1234')
         user, created = User.objects.get_or_create(
             first_name=first_name, 
             last_name=last_name, 
