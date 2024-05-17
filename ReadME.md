@@ -23,7 +23,7 @@ pip install mysqlclient
 ---
 
 ### Step 3: Configure Database
-Configure the database of your choice in the `settings.py` file. By default, MySQL is used.
+Configure the database of your choice in the `settings.py` file and then run the commands below. By default, MySQL is used. If changed any other make sure to install its client.
 ```
 python manage.py makemigrations
 python manage.py migrate
@@ -32,7 +32,7 @@ python manage.py migrate
 ---
 
 ### Step 4: Populate Fake Data
-To populate the database with fake data, run the following command and specify the number of records to populate:
+To populate the database with fake data, run the following command and specify the number of records to populate: (ignore the warnings here it's just timezone variation)
 ```
 python populate.py
 ```
