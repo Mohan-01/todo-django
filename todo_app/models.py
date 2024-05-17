@@ -21,9 +21,7 @@ class Task(models.Model):
     
     def save(self, *args, **kwargs):
         if not self.slug:
-            print('saving task')
             self.slug = slugify(self.title)
-        print(self.slug)
         super(Task, self).save(*args, **kwargs)
     
     
