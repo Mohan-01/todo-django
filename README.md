@@ -14,8 +14,10 @@ Clone the repository to your local system.
 
 ### Step 2: Install Dependencies
 Run the following commands to install the required dependencies:
+```
 pip install Django
 pip install Faker
+```
 
 ---
 
