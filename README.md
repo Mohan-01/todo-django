@@ -18,7 +18,7 @@ Run the following commands to install the required dependencies:
 pip install Django
 pip install Faker
 ```
-
+ 
 ---
 
 ### Step 3: Configure Database
